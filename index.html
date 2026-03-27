@@ -575,7 +575,7 @@ function upd(){
   const ill=rv==='illim';
   document.getElementById('cv1').textContent=fmt(Math.round(total*0.1));
   document.getElementById('cv2').textContent=fmt(Math.round(total*0.6));
-  document.getElementById('cv3').textContent=fmt(Math.round(total*0.3));
+  document.getElementById('cv3')?.textContent||''=fmt(Math.round(total*0.3));
   if(ill)document.getElementById('cvill').textContent=fmt(Math.round(total*0.6));
 }
 
@@ -622,7 +622,7 @@ function buildTxt(){
   const ill=rv==='illim';
   t+=`\n${'─'.repeat(40)}\nTOTAL HT : ${total} · TVA 0%\n\nCONDITIONS DE PAIEMENT\n`;
   if(ill){t+=`• 10% acompte à la signature : ${document.getElementById('cv1').textContent}\n• 90% avant post-production : ${document.getElementById('cvill').textContent}\n`;}
-  else{t+=`• 10% à la signature : ${document.getElementById('cv1').textContent}\n• 60% le jour J      : ${document.getElementById('cv2').textContent}\n• 30% à la livraison : ${document.getElementById('cv3').textContent}\n`;}
+  else{t+=`• 10% à la signature : ${document.getElementById('cv1').textContent}\n• 60% le jour J      : ${document.getElementById('cv2').textContent}\n• 30% à la livraison : ${document.getElementById('cv3')?.textContent||''}\n`;}
   t+=`\n${'─'.repeat(40)}\nV51 Production / V51 Wedding · 51flm.vins@gmail.com · 06 03 41 16 15`;
   return t;
 }
