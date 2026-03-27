@@ -623,7 +623,7 @@ async function sendDevis(){
   try{
     await emailjs.send('service_rf3arwd','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
     btn.style.display='none';document.getElementById('successmsg').style.display='block';toast('Envoyé !');
-  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Erreur envoi — réessaie');}
+  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('ERR: '+JSON.stringify(e).slice(0,120));}
 }
 
 function copyDevis(){if(document.getElementById('tot').textContent==='0 €'){toast('Sélectionne une prestation');return;}navigator.clipboard.writeText(buildTxt()).then(()=>toast('Copié !'));}
