@@ -301,8 +301,8 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
     </div>
     <div class="rblock">
       <div class="rrow">
-        <span class="ql">Nb d'extraits ou reels</span>
-        <select class="qsel" id="rqty" onchange="updReels()"><option value="0">0</option><option value="1">1</option><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select>
+        <span class="ql">Nb d'extraits</span>
+        <input type="number" id="rqty" min="0" value="0" style="width:60px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:4px 8px;text-align:center;outline:none;" oninput="updReels()">
         <span class="ql">Type</span>
         <select class="qsel" id="rtype" onchange="updReels()"><option value="s">Simple (aplat + sous-titres)</option><option value="p">Premium (zooms + effets)</option></select>
       </div>
@@ -466,10 +466,22 @@ function updReels(){
   const type=document.getElementById('rtype').value;
   if(qty===0){reelsC=0;document.getElementById('rtotal').textContent='0 €';document.getElementById('rdetail').textContent='';upd();return;}
   const tbl=type==='s'?RS:RP;
-  const prix=tbl[qty]||0;
+  // Find best matching tier or calculate per unit from closest lower tier
+  const tiers=[1,5,10,15,20];
+  let prix=0;
+  if(tbl[qty]){
+    prix=tbl[qty];
+  } else {
+    // Find closest lower tier for per-unit rate, apply to qty
+    let bestTier=1;
+    for(const t of tiers){if(t<=qty)bestTier=t;}
+    const pu=Math.round(tbl[bestTier]/bestTier);
+    prix=pu*qty;
+  }
   reelsC=prix;
+  const pu=Math.round(prix/qty);
   document.getElementById('rtotal').textContent=fmt(prix);
-  document.getElementById('rdetail').textContent=qty+' réel'+(qty>1?'s':'')+' · '+Math.round(prix/qty)+' €/réel · '+(type==='s'?'aplat + sous-titres':'zooms + effets');
+  document.getElementById('rdetail').textContent=qty+' extrait'+(qty>1?'s':'')+' · '+pu+' €/extrait · '+(type==='s'?'aplat + sous-titres':'zooms + effets');
   upd();
 }
 
@@ -588,7 +600,7 @@ function buildTxt(){
   if(pv==='cev'&&(devent||levent))t+=`\nDESCRIPTION\n${devent||''}${levent?'\nLien : '+levent:''}\n`;
   if(pv==='cautre'&&(dautreNom||dautre))t+=`\nAUTRE PRESTATION\n${dautreNom||''}\n${dautre||''}\n`;
   if(freeOpts.length)t+=`\nOPTIONS PERSONNALISÉES\n${freeOpts.map(o=>o.n+' : '+fmt(o.p)).join('\n')}\n`;
-  if(reelsC>0){const qty=document.getElementById('rqty')?.value;const type=document.getElementById('rtype')?.value;t+=`\nPACK REELS\n${qty} réels · ${type==='s'?'Simple':'Premium'} · ${fmt(reelsC)}\n`;}
+  if(reelsC>0){const qty=document.getElementById('rqty')?.value;const type=document.getElementById('rtype')?.value;t+=`\nEXTRAITS\n${qty} extrait(s) · ${type==='s'?'Simple':'Premium'} · ${fmt(reelsC)}\n`;}
   const rp=RETPR[rv]||0;if(rp>0)t+=`\nRETOUCHES\n${rv==='illim'?'Illimitées · 100% avant post-production':'+'+rv+' retouche'+(rv>1?'s':'')+' (en amont)'} · ${fmt(rp)}\n`;
   if(dep>0)t+=`\nDÉPLACEMENT\n${km} km × 0,68 €/km = ${fmt(dep)}\n`;
   if(pl)t+=`\nDESCRIPTION PROJET\n${pl}\n`;
