@@ -253,19 +253,19 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
     <div class="stitle" style="margin-top:0">Tournage sur place</div>
     <div class="opts">
       <input class="opt" type="radio" name="p" id="pcdj1" value="cdj1" onchange="upd()">
-      <label for="pcdj1"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Essentielle</span><span class="od">4h · Sony FX3 + Ronin + micro</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><select class="qsel qinline" id="q-cdj1" onchange="upd()" onclick="e=>e.stopPropagation()"><option value="1">×1</option><option value="2">×2</option><option value="3">×3</option><option value="4">×4</option><option value="5">×5</option></select><span class="op">450 €</span></div></label>
+      <label for="pcdj1"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Essentielle</span><span class="od">4h · Sony FX3 + Ronin + micro</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cdj1" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">450 €</span></div></label>
       <input class="opt" type="radio" name="p" id="pcdj2" value="cdj2" onchange="upd()">
-      <label for="pcdj2"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Complète</span><span class="od">4h · Tout matériel + 2e caméra + lumières + setup ITW/podcast</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><select class="qsel qinline" id="q-cdj2" onchange="upd()" onclick="e=>e.stopPropagation()"><option value="1">×1</option><option value="2">×2</option><option value="3">×3</option><option value="4">×4</option><option value="5">×5</option></select><span class="op">600 €</span></div></label>
+      <label for="pcdj2"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Complète</span><span class="od">4h · Tout matériel + 2e caméra + lumières + setup ITW/podcast</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cdj2" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">600 €</span></div></label>
     </div>
 
     <div class="stitle" style="margin-top:14px">Contenu / Post-production</div>
     <div class="opts">
       <input class="opt" type="radio" name="p" id="pcil" value="citw-l" onchange="upd()">
-      <label for="pcil"><div class="ol"><span class="dot"></span><div><span class="on2">Interview longue</span><span class="od">Tournage + montage complet · format long</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><select class="qsel qinline" id="q-citw-l" onchange="upd()" onclick="e=>e.stopPropagation()"><option value="1">×1</option><option value="2">×2</option><option value="3">×3</option><option value="4">×4</option><option value="5">×5</option></select><span class="op">450 €</span></div></label>
+      <label for="pcil"><div class="ol"><span class="dot"></span><div><span class="on2">Interview longue</span><span class="od">Tournage + montage complet · format long</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-citw-l" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">450 €</span></div></label>
       <input class="opt" type="radio" name="p" id="pcvc" value="cvc" onchange="upd()">
-      <label for="pcvc"><div class="ol"><span class="dot"></span><div><span class="on2">Vidéo courte créée de zéro</span><span class="od">Mash-up / extraits longs sans interview longue préalable</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><select class="qsel qinline" id="q-cvc" onchange="upd()" onclick="e=>e.stopPropagation()"><option value="1">×1</option><option value="2">×2</option><option value="3">×3</option><option value="4">×4</option><option value="5">×5</option></select><span class="op">300 €</span></div></label>
+      <label for="pcvc"><div class="ol"><span class="dot"></span><div><span class="on2">Vidéo courte créée de zéro</span><span class="od">Mash-up / extraits longs sans interview longue préalable</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cvc" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">300 €</span></div></label>
       <input class="opt" type="radio" name="p" id="pcic" value="citw-c" onchange="upd()">
-      <label for="pcic"><div class="ol"><span class="dot"></span><div><span class="on2">Version courte d'un projet existant</span><span class="od">Découpe + montage depuis un format long déjà réalisé</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><select class="qsel qinline" id="q-citw-c" onchange="upd()" onclick="e=>e.stopPropagation()"><option value="1">×1</option><option value="2">×2</option><option value="3">×3</option><option value="4">×4</option><option value="5">×5</option></select><span class="op">200 €</span></div></label>
+      <label for="pcic"><div class="ol"><span class="dot"></span><div><span class="on2">Version courte d'un projet existant</span><span class="od">Découpe + montage depuis un format long déjà réalisé</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-citw-c" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">200 €</span></div></label>
       <input class="opt" type="radio" name="p" id="pcfj" value="cfilm-j" onchange="upd();showBlock('blk-film')">
       <label for="pcfj"><div class="ol"><span class="dot"></span><div><span class="on2">Montage film d'entreprise</span><span class="od">Post-production uniquement · rushes fournis · estimation sur mesure</span></div></div><div class="or"><span class="op" style="color:var(--text3);font-size:11px">Devis sur mesure</span></div></label>
       <input class="opt" type="radio" name="p" id="pcev" value="cev" onchange="upd();showBlock('blk-event')">
@@ -321,7 +321,7 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
     </div>
     <div class="qrow" id="qa-row">
       <span class="ql">Nombre de demi-journées :</span>
-      <select class="qsel" id="qa" onchange="upd()"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+      <input type="number" class="qinline-num" id="qa" value="1" min="1" style="width:55px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()">
       <span class="ql" id="qa-tot" style="color:var(--accent)"></span>
     </div>
     <div class="stitle" style="margin-top:14px">Description du projet</div>
@@ -494,9 +494,9 @@ function delFO(id){freeOpts=freeOpts.filter(o=>o.id!==id);renderFO();upd();}
 function renderFO(){document.getElementById('folist').innerHTML=freeOpts.map(o=>`<div class="foitem"><span class="fin">${o.n}</span><div class="fir"><span class="fip">${fmt(o.p)}</span><span class="fid" onclick="delFO(${o.id})">✕</span></div></div>`).join('');}
 
 function getQty(pv){
-  if(['adj1','adj2'].includes(pv)){const q=document.getElementById('qa');return q?parseInt(q.value)||1:1;}
+  if(['adj1','adj2'].includes(pv)){const q=document.getElementById('qa');return q?Math.max(1,parseInt(q.value)||1):1;}
   const inl=document.getElementById('q-'+pv);
-  if(inl) return parseInt(inl.value)||1;
+  if(inl) return Math.max(1,parseInt(inl.value)||1);
   return 1;
 }
 
