@@ -621,7 +621,7 @@ async function sendDevis(){
   const btn=document.getElementById('sendbtn');
   btn.disabled=true;btn.textContent='Envoi en cours...';
   try{
-    await emailjs.send('service_zc6omgv','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
+    await emailjs.send('service_rf3arwd','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
     btn.style.display='none';document.getElementById('successmsg').style.display='block';toast('Envoyé !');
   }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Erreur envoi — réessaie');}
 }
