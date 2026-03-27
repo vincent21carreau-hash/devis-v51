@@ -412,7 +412,7 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
 </div>
 <div id="toast"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
 function showBlock(id){
   ['blk-film','blk-event','blk-autre'].forEach(b=>{
@@ -623,7 +623,7 @@ async function sendDevis(){
   try{
     await emailjs.send('service_rf3arwd','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
     btn.style.display='none';document.getElementById('successmsg').style.display='block';toast('Envoyé !');
-  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('ERR: '+JSON.stringify(e).slice(0,120));}
+  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Err: '+(e.text||e.status||JSON.stringify(e)).toString().substring(0,60));}
 }
 
 function copyDevis(){if(document.getElementById('tot').textContent==='0 €'){toast('Sélectionne une prestation');return;}navigator.clipboard.writeText(buildTxt()).then(()=>toast('Copié !'));}
