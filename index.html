@@ -301,7 +301,7 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
     </div>
     <div class="rblock">
       <div class="rrow">
-        <span class="ql">Nb d'extraits</span>
+        <span class="ql">Nb d'extraits ou reels</span>
         <select class="qsel" id="rqty" onchange="updReels()"><option value="0">0</option><option value="1">1</option><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select>
         <span class="ql">Type</span>
         <select class="qsel" id="rtype" onchange="updReels()"><option value="s">Simple (aplat + sous-titres)</option><option value="p">Premium (zooms + effets)</option></select>
@@ -455,7 +455,7 @@ function setCat(c,el){
   reelsC=0;
   const rqty=document.getElementById('rqty');if(rqty)rqty.value='0';
   updReels();
-  if(c==='m'){document.body.classList.add('w');document.getElementById('heyebrow').textContent='Vidéaste de mariage';document.getElementById('htitle').textContent='V51 Wedding';if(document.getElementById('hsubtitle'))document.getElementById('hsubtitle').textContent='Corporate / Événement · Contenu';}
+  if(c==='m'){document.body.classList.add('w');document.getElementById('heyebrow').textContent='Tarifs 2025';document.getElementById('htitle').textContent='V51 Wedding';if(document.getElementById('hsubtitle'))document.getElementById('hsubtitle').textContent='Corporate / Événement · Contenu';}
   else{document.body.classList.remove('w');document.getElementById('heyebrow').textContent='V51 Production · Dijon';document.getElementById('htitle').textContent='Simulateur de devis';if(document.getElementById('hsubtitle'))document.getElementById('hsubtitle').textContent='Corporate / Événement · Contenu';}
   upd();
 }
@@ -609,9 +609,9 @@ async function sendDevis(){
   const btn=document.getElementById('sendbtn');
   btn.disabled=true;btn.textContent='Envoi en cours...';
   try{
-    await emailjs.send('service_zc6omgv','template_foflasi',{to_email:'51flm.vins@gmail.com',client_name:nom,client_email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),subject:'Nouveau devis — '+nom+' · '+document.getElementById('tot').textContent});
+    await emailjs.send('service_zc6omgv','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
     btn.style.display='none';document.getElementById('successmsg').style.display='block';toast('Envoyé !');
-  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Erreur — copie manuellement');}
+  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Erreur envoi — réessaie');}
 }
 
 function copyDevis(){if(document.getElementById('tot').textContent==='0 €'){toast('Sélectionne une prestation');return;}navigator.clipboard.writeText(buildTxt()).then(()=>toast('Copié !'));}
