@@ -224,11 +224,11 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
 
   <!-- MARIAGE -->
   <div id="cat-m" class="opts" style="display:none">
-    <input class="opt" type="radio" name="p" id="pm1" value="m1" onchange="upd()">
+    <input class="opt" type="checkbox" name="p" id="pm1" value="m1" onchange="upd()">
     <label for="pm1"><div class="ol"><span class="dot"></span><div><span class="on2">Formule Authentique</span><span class="od">8h · Préparatifs → cérémonie → cocktail → début soirée · Film 8–12 min + teaser · Drone inclus</span></div></div><div class="or"><span class="op">2 000 €</span></div></label>
-    <input class="opt" type="radio" name="p" id="pm2" value="m2" onchange="upd()">
+    <input class="opt" type="checkbox" name="p" id="pm2" value="m2" onchange="upd()">
     <label for="pm2"><div class="ol"><span class="dot"></span><div><span class="on2">Formule Émotion</span><span class="od">10h · Préparatifs → soirée dansante · Film 15–20 min + best of 3–5 min + vidéo courte · Drone inclus</span></div></div><div class="or"><span class="op">2 500 €</span></div></label>
-    <input class="opt" type="radio" name="p" id="pm3" value="m3" onchange="upd()">
+    <input class="opt" type="checkbox" name="p" id="pm3" value="m3" onchange="upd()">
     <label for="pm3"><div class="ol"><span class="dot"></span><div><span class="on2">Formule Signature</span><span class="od">12h · Préparatifs → soirée · Film 20–30 min + film court + teaser + discours + 9:16 · Drone inclus</span></div></div><div class="or"><span class="op">3 000 €</span></div></label>
   </div>
   <div id="opts-m" style="display:none">
@@ -252,25 +252,25 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
 
     <div class="stitle" style="margin-top:0">Tournage sur place</div>
     <div class="opts">
-      <input class="opt" type="radio" name="p" id="pcdj1" value="cdj1" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="pcdj1" value="cdj1" onchange="upd()">
       <label for="pcdj1"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Essentielle</span><span class="od">4h · Sony FX3 + Ronin + micro</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cdj1" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">450 €</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcdj2" value="cdj2" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="pcdj2" value="cdj2" onchange="upd()">
       <label for="pcdj2"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Complète</span><span class="od">4h · Tout matériel + 2e caméra + lumières + setup ITW/podcast</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cdj2" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">600 €</span></div></label>
     </div>
 
     <div class="stitle" style="margin-top:14px">Contenu / Post-production</div>
     <div class="opts">
-      <input class="opt" type="radio" name="p" id="pcil" value="citw-l" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="pcil" value="citw-l" onchange="upd()">
       <label for="pcil"><div class="ol"><span class="dot"></span><div><span class="on2">Interview longue</span><span class="od">Tournage + montage complet · format long</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-citw-l" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">450 €</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcvc" value="cvc" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="pcvc" value="cvc" onchange="upd()">
       <label for="pcvc"><div class="ol"><span class="dot"></span><div><span class="on2">Vidéo courte créée de zéro</span><span class="od">Mash-up / extraits longs sans interview longue préalable</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-cvc" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">300 €</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcic" value="citw-c" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="pcic" value="citw-c" onchange="upd()">
       <label for="pcic"><div class="ol"><span class="dot"></span><div><span class="on2">Version courte d'un projet existant</span><span class="od">Découpe + montage depuis un format long déjà réalisé</span></div></div><div class="or" style="display:flex;align-items:center;gap:8px"><input type="number" class="qinline-num" id="q-citw-c" value="1" min="1" style="width:48px;background:transparent;border:1px solid var(--border2);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;padding:3px 6px;text-align:center;outline:none;" oninput="upd()"><span class="op">200 €</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcfj" value="cfilm-j" onchange="upd();showBlock('blk-film')">
+      <input class="opt" type="checkbox" name="p" id="pcfj" value="cfilm-j" onchange="upd();showBlock('blk-film')">
       <label for="pcfj"><div class="ol"><span class="dot"></span><div><span class="on2">Montage film d'entreprise</span><span class="od">Post-production uniquement · rushes fournis · estimation sur mesure</span></div></div><div class="or"><span class="op" style="color:var(--text3);font-size:11px">Devis sur mesure</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcev" value="cev" onchange="upd();showBlock('blk-event')">
+      <input class="opt" type="checkbox" name="p" id="pcev" value="cev" onchange="upd();showBlock('blk-event')">
       <label for="pcev"><div class="ol"><span class="dot"></span><div><span class="on2">Montage aftermovie / événement</span><span class="od">Post-production uniquement · rushes fournis · estimation sur mesure</span></div></div><div class="or"><span class="op" style="color:var(--text3);font-size:11px">Devis sur mesure</span></div></label>
-      <input class="opt" type="radio" name="p" id="pcautre" value="cautre" onchange="upd();showBlock('blk-autre')">
+      <input class="opt" type="checkbox" name="p" id="pcautre" value="cautre" onchange="upd();showBlock('blk-autre')">
       <label for="pcautre"><div class="ol"><span class="dot"></span><div><span class="on2">Autre</span><span class="od">Décrivez votre besoin · estimation sur mesure</span></div></div><div class="or"><span class="op" style="color:var(--text3);font-size:11px">Devis sur mesure</span></div></label>
     </div>
 
@@ -314,9 +314,9 @@ textarea.fi{resize:vertical;min-height:70px;line-height:1.6;border:1px solid var
     <!-- AUTRE -->
   <div id="cat-a" style="display:none">
     <div class="opts">
-      <input class="opt" type="radio" name="p" id="padj1" value="adj1" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="padj1" value="adj1" onchange="upd()">
       <label for="padj1"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Essentielle</span><span class="od">4h · FX3 + Ronin + micro + drone</span></div></div><div class="or"><span class="op">450 €</span></div></label>
-      <input class="opt" type="radio" name="p" id="padj2" value="adj2" onchange="upd()">
+      <input class="opt" type="checkbox" name="p" id="padj2" value="adj2" onchange="upd()">
       <label for="padj2"><div class="ol"><span class="dot"></span><div><span class="on2">Demi-journée Complète</span><span class="od">4h · Tout matériel + 2e caméra + lumières</span></div></div><div class="or"><span class="op">600 €</span></div></label>
     </div>
     <div class="qrow" id="qa-row">
@@ -513,7 +513,9 @@ function getQty(pv){
 }
 
 function upd(){
-  const pv=document.querySelector('input[name="p"]:checked')?.value;
+  // Collect all checked prestations
+  const pvAll=[...document.querySelectorAll('input[name="p"]:checked')].map(el=>el.value);
+  const pv=pvAll.length>0?pvAll[0]:null; // primary for indicators
   const km=parseFloat(document.getElementById('km').value)||0;
   const rv=document.querySelector('input[name="ret"]:checked')?.value||'0';
   const nom=document.getElementById('cnom').value.trim();
@@ -537,11 +539,15 @@ function upd(){
 
   const lines=[];let total=0;
 
-  if(pv){
-    const p=PR[pv];const qty=getQty(pv);
-    const bt=p.b*qty;
-    lines.push({n:p.l+(qty>1?' × '+qty:''),s:p.d,pr:bt});
-    total+=bt;
+  if(pvAll.length>0){
+    // Add each selected prestation
+    pvAll.forEach(pvItem=>{
+      const p=PR[pvItem];if(!p)return;
+      const qty=getQty(pvItem);
+      const bt=p.b*qty;
+      if(bt>0) lines.push({n:p.l+(qty>1?' × '+qty:''),s:p.d,pr:bt});
+      total+=bt;
+    });
     if(cat==='m'){Object.keys(OM).forEach(id=>{if(document.getElementById(id)?.checked){lines.push({n:OM[id].l,s:'Option mariage',pr:OM[id].p});total+=OM[id].p;}});}
     freeOpts.forEach(o=>{if(o.p>0){lines.push({n:o.n,s:'Option personnalisée',pr:o.p});total+=o.p;}});
     const rp=RETPR[rv]||0;
@@ -574,7 +580,9 @@ function upd(){
 }
 
 function buildTxt(){
-  const pv=document.querySelector('input[name="p"]:checked')?.value;
+  // Collect all checked prestations
+  const pvAll=[...document.querySelectorAll('input[name="p"]:checked')].map(el=>el.value);
+  const pv=pvAll.length>0?pvAll[0]:null; // primary for indicators
   const nom=document.getElementById('cnom').value.trim()||'Client';
   const email=document.getElementById('cemail').value.trim();
   const km=parseFloat(document.getElementById('km').value)||0;
@@ -585,9 +593,15 @@ function buildTxt(){
   const pl=document.getElementById('projlib')?.value.trim()||'';
   const total=document.getElementById('tot').textContent;
   let t=`DEVIS V51\n${'─'.repeat(40)}\n\nClient : ${nom}${email?'\nEmail  : '+email:''}${cprojet?'\nProjet : '+cprojet:''}\n\n`;
-  if(pv){
-    const p=PR[pv];const qty=getQty(pv);
-    t+=`PRESTATION\n${p.l}${qty>1?' × '+qty:''}  \n${p.d}\n`;
+  if(pvAll.length>0){
+    t+='PRESTATIONS\n';
+    pvAll.forEach(pvItem=>{
+      const p=PR[pvItem];if(!p)return;
+      const qty=getQty(pvItem);
+      t+=`${p.l}${qty>1?' × '+qty:''} — ${fmt(p.b*qty)}\n`;
+    });
+    t+='\n';
+    const pv=pvAll[0];const p=PR[pv];
     if(cat==='m'){const opts=Object.keys(OM).filter(id=>document.getElementById(id)?.checked).map(id=>OM[id].l);if(opts.length)t+=`\nOPTIONS MARIAGE\n${opts.join('\n')}\n`;}
   }
   const dfilm=document.getElementById('desc-film')?.value.trim();
@@ -614,22 +628,31 @@ function buildTxt(){
 }
 
 async function sendDevis(){
-  const pv=document.querySelector('input[name="p"]:checked')?.value;
+  // Collect all checked prestations
+  const pvAll=[...document.querySelectorAll('input[name="p"]:checked')].map(el=>el.value);
+  const pv=pvAll.length>0?pvAll[0]:null; // primary for indicators
   if(!pv&&reelsC===0){toast('Sélectionne une prestation');return;}
   const nom=document.getElementById('cnom').value.trim();
   if(!nom){toast('Renseigne le nom du client');return;}
   const btn=document.getElementById('sendbtn');
   btn.disabled=true;btn.textContent='Envoi en cours...';
   try{
-    await emailjs.send('service_rf3arwd','template_foflasi',{name:nom,email:document.getElementById('cemail').value.trim()||'Non renseigné',message:buildTxt(),client_name:nom+' · '+document.getElementById('tot').textContent});
+    await emailjs.send('service_rf3arwd','template_foflasi',{
+      name: nom,
+      email: document.getElementById('cemail').value.trim()||'Non renseigné',
+      message: buildTxt(),
+      client_name: nom+' — '+document.getElementById('tot').textContent
+    });
     btn.style.display='none';document.getElementById('successmsg').style.display='block';toast('Envoyé !');
-  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';toast('Err: '+(e.text||e.status||JSON.stringify(e)).toString().substring(0,60));}
+  }catch(e){btn.disabled=false;btn.textContent='Envoyer à Vincent ↗';console.error('EmailJS error:',e);toast('Erreur: '+(e.text||e.status||e.message||JSON.stringify(e)).toString().substring(0,80));}
 }
 
 function copyDevis(){if(document.getElementById('tot').textContent==='0 €'){toast('Sélectionne une prestation');return;}navigator.clipboard.writeText(buildTxt()).then(()=>toast('Copié !'));}
 
 function saveScen(){
-  const pv=document.querySelector('input[name="p"]:checked')?.value;if(!pv&&reelsC===0){toast('Sélectionne une prestation');return;}
+  // Collect all checked prestations
+  const pvAll=[...document.querySelectorAll('input[name="p"]:checked')].map(el=>el.value);
+  const pv=pvAll.length>0?pvAll[0]:null; // primary for indicatorsif(!pv&&reelsC===0){toast('Sélectionne une prestation');return;}
   const nom=document.getElementById('cnom').value.trim()||'Sans nom';
   const total=document.getElementById('tot').textContent;
   const lbl=pv?PR[pv].l:'Pack Reels';
@@ -641,21 +664,31 @@ function saveScen(){
 function delS(id){scens=scens.filter(s=>s.id!==id);document.getElementById('histosec').style.display=scens.length?'block':'none';document.getElementById('hlist').innerHTML=scens.map(s=>`<div class="hi"><span class="hin">${s.nom} · ${s.lbl.split('—')[0].trim()}</span><span class="hip">${s.total}</span><span class="hid" onclick="delS(${s.id})">✕</span></div>`).join('');}
 
 function resetAll(){
+  // Reset all radio buttons
   document.querySelectorAll('input[name="p"],input[name="ret"]').forEach(r=>r.checked=false);
+  // Reset all checkboxes
   document.querySelectorAll('.chk').forEach(c=>c.checked=false);
-  document.getElementById('km').value=0;document.getElementById('cnom').value='';document.getElementById('cemail').value='';document.getElementById('notes').value='';
-  const rqty=document.getElementById('rqty');if(rqty)rqty.value='0';
-  freeOpts=[];renderFO();reelsC=0;
-  document.getElementById('illnote').style.display='none';
-  document.getElementById('crow-ill').style.display='none';
-  document.getElementById('crow-j').style.display='flex';
-  document.getElementById('sendbtn').style.display='block';document.getElementById('sendbtn').disabled=false;document.getElementById('sendbtn').textContent='Envoyer à Vincent ↗';
-  document.getElementById('successmsg').style.display='none';
-  ['cprojet','projlib','desc-film','link-film','desc-event','link-event','autre-nom','desc-autre','foname','foprice'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  document.querySelectorAll('.qinline-num').forEach(el=>{el.value='1';});
+  // Reset text/email/number/textarea fields
+  const fields=['cnom','cemail','cprojet','km','notes','projlib','desc-film','link-film','desc-event','link-event','autre-nom','desc-autre','foname','foprice'];
+  fields.forEach(id=>{const el=document.getElementById(id);if(el)el.value=id==='km'?'0':'';});
+  // Reset quantity inputs
+  document.querySelectorAll('.qinline-num').forEach(el=>el.value='1');
   const qa=document.getElementById('qa');if(qa)qa.value='1';
-  const rt=document.getElementById('rtype');if(rt)rt.selectedIndex=0;
+  // Reset reels
+  const rqty=document.getElementById('rqty');if(rqty)rqty.value='0';
+  const rtype=document.getElementById('rtype');if(rtype)rtype.selectedIndex=0;
+  // Reset free options
+  freeOpts=[];renderFO();reelsC=0;
+  // Hide description blocks
   ['blk-film','blk-event','blk-autre'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
+  // Reset illimitees note
+  const illnote=document.getElementById('illnote');if(illnote)illnote.style.display='none';
+  const crowill=document.getElementById('crow-ill');if(crowill)crowill.style.display='none';
+  const crowj=document.getElementById('crow-j');if(crowj)crowj.style.display='flex';
+  // Reset send button
+  const sb=document.getElementById('sendbtn');if(sb){sb.style.display='block';sb.disabled=false;sb.textContent='Envoyer à Vincent ↗';}
+  document.getElementById('successmsg').style.display='none';
+  // Recalculate
   updReels();upd();
 }
 
